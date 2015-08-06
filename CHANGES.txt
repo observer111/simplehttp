@@ -1,0 +1,26 @@
+
+Thu Jan  1 15:06:48 PST 2015
+
+    - added multi-platform (generic linux, win32) support
+
+            cmake_for_linux.sh          # cleanly make in linux-build
+            cmake_for_mingw_win32.sh    #      "       in win32-build
+
+    - call back parameter (recv) changed from char * to std::string() 
+      ... and is not null terminated.
+
+
+Sat Dec 13 20:15:33 PST 2014
+
+    - modified callback function signature to include char *req and void *context
+
+
+Sun Dec  7 16:28:40 PST 2014
+
+    -DUSE_STD_THREAD new macro setting to get a pthread-ed server using std::thread
+     (defaults to a forking server if USE_STD_THREAD isn't set)
+
+    - improved logging;  .log set to 0 = no logging; 1=one-line traditional log entries
+    per request; log > 1 gives increaslingly verbose debugging messages.
+
+
